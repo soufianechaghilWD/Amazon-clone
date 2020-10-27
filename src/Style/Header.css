@@ -1,0 +1,114 @@
+.header1 {
+  display: flex;
+  background-color: #131921;
+  padding: 7px;
+  color: white;
+}
+.header__logo {
+  object-fit: contain;
+  width: 100px;
+  padding-top: 10px;
+  padding-right: 25px;
+  padding-left: 10px;
+  border: 1px solid #131921;
+  cursor: pointer;
+}
+.header__search {
+  display: flex;
+  width: 100%;
+  flex: 1;
+  margin: 0 40px;
+}
+.header__searchInput {
+  width: 100%;
+  flex: 1;
+  border: 1px solid #131921;
+  border-left: none;
+  border-right: none;
+}
+.header__searchSelect {
+  border: 1px solid #131921;
+  border-right-color: rgb(228, 226, 226);
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  background-color: rgb(238, 232, 232);
+}
+.header__searchButton {
+  border: 1px solid #131921;
+  border-left: none;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: #cd9042;
+}
+.header__menu {
+  padding: 5px 0;
+  border: 1px solid #131921;
+  margin: 5px 5px 0 15px;
+  cursor: pointer;
+}
+.header__option {
+  border: 1px solid #131921;
+  padding: 0 10px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.header__basket {
+  padding-top: 10px;
+}
+.header__option p span {
+  color: #cd9042;
+  font-size: 20px;
+}
+.header__logo:hover,
+.header__menu:hover,
+.header__option:hover {
+  border: 1px solid white;
+}
+.header2 {
+  display: flex;
+  justify-content: space-between;
+  background-color: #232f3e;
+  color: white;
+  padding-bottom: 5px;
+}
+.header2__section1 {
+  display: flex;
+}
+.header2__section1__part1 {
+  display: flex;
+  margin-left: 20px;
+  margin: 5px 5px 5px 15px;
+  padding: 0px 5px 5px 2px;
+  margin-right: 80px;
+  border: 1px solid #232f3e;
+  cursor: pointer;
+}
+.header2__location {
+  padding-top: 7px;
+  font-size: 15px;
+}
+.header2__headLine {
+  margin: 0 8px;
+  margin: 7px;
+  padding: 5px;
+  border: 1px solid #232f3e;
+  cursor: pointer;
+}
+.header2__brand {
+  font-weight: bold;
+  margin: 7px;
+  padding: 5px;
+  border: 1px solid #232f3e;
+  cursor: pointer;
+}
+.header2__deliver p {
+  font-size: 15px;
+  line-height: 10px;
+}
+.header2__section1__part1:hover,
+.header2__headLine:hover,
+.header2__brand:hover {
+  border-color: white;
+}
