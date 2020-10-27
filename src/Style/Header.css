@@ -32,6 +32,7 @@
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
   background-color: rgb(238, 232, 232);
+  cursor: pointer;
 }
 .header__searchButton {
   border: 1px solid #131921;
@@ -41,6 +42,7 @@
   padding-right: 10px;
   padding-left: 10px;
   background-color: #cd9042;
+  cursor: pointer;
 }
 .header__menu {
   padding: 5px 0;
@@ -111,4 +113,89 @@
 .header2__headLine:hover,
 .header2__brand:hover {
   border-color: white;
+}
+.headerPhone {
+  display: none;
+}
+.headerP__row1 {
+  display: flex;
+  justify-content: space-between;
+  background-color: #232f3e;
+  padding: 10px 20px 0 15px;
+  color: white;
+}
+.headerP__row2 {
+  background-color: #232f3e;
+  display: flex;
+  padding: 0 20px;
+  height: 40px;
+  padding-top: 15px;
+}
+.headerP__row1__part1 {
+  display: flex;
+}
+.headerP__row1__part2 {
+  display: flex;
+}
+.headerP__logo {
+  object-fit: contain;
+  width: 100px;
+}
+.headerP__menu {
+  padding-right: 10px;
+}
+.headerP__signin {
+  padding-right: 13px;
+  font-weight: bold;
+}
+.headerP__total {
+  color: #cd9042;
+  font-size: 20px;
+}
+.headerP__wrap {
+  display: flex;
+  flex: 1;
+  background-color: white;
+  border-radius: 5px;
+}
+.headerP__input {
+  border: 1px solid rgb(35, 47, 62, 0);
+  flex: 1;
+  border-right: none;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.headerP__button {
+  border: 1px solid rgb(35, 47, 62, 0);
+  border-left: none;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #cd9042;
+}
+.headerP__row3 {
+  display: flex;
+  padding: 15px;
+  color: white;
+  background-color: #232f3e;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+.headerP__row3::-webkit-scrollbar {
+  display: none;
+}
+.headerP__row3 > p {
+  display: inline;
+  padding-right: 16px;
+  white-space: nowrap;
+}
+
+@media (max-width: 990px) {
+  .headerpc {
+    display: none;
+  }
+  .headerPhone {
+    display: block;
+  }
 }
