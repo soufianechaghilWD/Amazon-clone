@@ -1,0 +1,117 @@
+.footer {
+  background-color: #232f3e;
+}
+.footer1 {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.footer1 {
+  display: flex;
+  background-color: #232f3e;
+  justify-content: space-between;
+}
+.footer1__option {
+  padding: 30px 10px;
+  color: white;
+}
+.footer1__option > h3 {
+  font-size: 17px;
+  padding-bottom: 18px;
+}
+.footer1__option > p {
+  font-size: 14px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+.footer1__option > p:hover {
+  text-decoration: underline;
+}
+.header__separate {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.footer2 {
+  display: flex;
+  background-color: #232f3e;
+  color: white;
+  padding: 20px 10%;
+  max-width: 1000px;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+.footer2__img {
+  padding-top: 10px;
+  width: 65px;
+  object-fit: contain;
+  padding-right: 60px;
+}
+.footer2__flag {
+  width: 20px;
+  object-fit: contain;
+  margin-bottom: 9px;
+}
+.footer2 > div {
+  margin-left: 15px;
+  display: flex;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  height: 30px;
+  padding: 8px 20px 0px 10px;
+}
+.footer2 > div > small {
+  padding: 0px 9px;
+}
+.footer2 > small {
+  margin-left: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  padding: 9px 15px;
+}
+.footer3wrap {
+  background-color: #131a22;
+}
+.footer3 {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 10px 20px;
+}
+
+.footer3__data {
+  padding: 0 0.75em;
+  line-height: 8px;
+  padding-bottom: 20px;
+}
+.footer3__data > a {
+  text-decoration: none;
+  color: white;
+  font-size: 11px;
+  font-weight: 400;
+}
+.footer3__data > a:hover {
+  text-decoration: underline;
+}
+.footer3__data > a > span {
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.footer3__separator {
+  width: 5%;
+}
+.footer3__final {
+  display: flex;
+  padding: 20px 0 10px;
+  color: white;
+  justify-content: center;
+}
+.footer3__final > p {
+  font-size: 12px;
+  padding-right: 14px;
+}
+.footer3__final > p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.footer3__final > span {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+}

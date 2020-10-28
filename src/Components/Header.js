@@ -270,10 +270,33 @@ function Header() {
                     <img src='https://pngimg.com/uploads/amazon/amazon_PNG11.png' alt="" className="header__logo" />
                     <div className="header__search">
                         <select className="header__searchSelect">
-                            <option value="volvo">All</option>
-                            <option value="saab">Saab</option>
-                            <option value="mercedes">Mercedes</option>
-                            <option value="audi">Audi</option>
+                            <option value="" selected disabled hidden >All</option>
+                            <option value="saab">All Departements</option>
+                            <option value="mercedes">Arts </option>
+                            <option value="audi">Automative</option>
+                            <option value="audi2">Baby</option>
+                            <option value="aud3">Beauty</option>
+                            <option value="audi4">Books</option>
+                            <option value="aud5">Camera</option>
+                            <option value="audi6">Clothing</option>
+                            <option value="aud7">Consumer</option>
+                            <option value="audi7">Grocery</option>
+                            <option value="audi8">Health</option>
+                            <option value="aud8">Home</option>
+                            <option value="aud9">Industrial</option>
+                            <option value="audi9">Kindle</option>
+                            <option value="audi10">Luggage</option>
+                            <option value="audi11">Musical</option>
+                            <option value="audi12">Office</option>
+                            <option value="audi13">Outdoors</option>
+                            <option value="audi14">Personal</option>
+                            <option value="aud12">Pet</option>
+                            <option value="aud11">Shoes</option>
+                            <option value="aud16">Software</option>
+                            <option value="aud141">Sports</option>
+                            <option value="audi123">Tools</option>
+                            <option value="audi1234">Toys</option>
+                            <option value="audi12345">Video</option>
                         </select>
                         <input type="text" className="header__searchInput" />
                         <button className="header__searchButton"><SearchIcon /></button>
