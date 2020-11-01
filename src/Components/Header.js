@@ -12,6 +12,9 @@ import Avatar from '@material-ui/core/Avatar';
 import ClearIcon from '@material-ui/icons/Clear';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import HomeIcon from '@material-ui/icons/Home';
+import { useStateValue } from "./StateProvider";
+import { Link } from 'react-router-dom';
+
 
 function getModalStyle() {
     const top = 0;
@@ -33,7 +36,7 @@ function getModalStyle() {
     paper: {
       position: 'absolute',
       backgroundColor: "rgba(0,0,0,0)",
-      width: 400,
+      width: 407,
       overflow: 'hidden',
       height: "100%",
       display: 'flex',
@@ -88,6 +91,7 @@ function getModalStyle() {
 
 function Header() {
 
+    const [{ basket }, dispatch] = useStateValue();
     const classes = useStyles();
     const classesP = useStylesP();
     const [modalStyle] = React.useState(getModalStyle);
@@ -267,7 +271,9 @@ function Header() {
             <div className="headerpc">
                 <div className="header1">
                     <a href="#" onClick={handleOpen} className="header__a"><MenuIcon className="header__menu"/></a>
-                    <img src='https://pngimg.com/uploads/amazon/amazon_PNG11.png' alt="" className="header__logo" />
+                    <Link to='/'>
+                      <img src='https://pngimg.com/uploads/amazon/amazon_PNG11.png' alt="" className="header__logo" />
+                    </Link>
                     <div className="header__search">
                         <select className="header__searchSelect">
                             <option value="" selected disabled hidden >All</option>
@@ -309,9 +315,11 @@ function Header() {
                         <span>Returns</span>
                         <p><strong>& Orders</strong></p>
                     </div>
-                    <div className="header__option header__basket">
-                        <p><ShoppingBasketIcon /><span> 0</span></p>
-                    </div>
+                    <Link to="/checkout" className="test">
+                      <div className="header__option header__basket">
+                          <p><ShoppingBasketIcon /><span> {basket?.length}</span></p>
+                      </div>
+                    </Link>
                 </div>
                 <div className="header2">
                     <div className="header2__section1">
@@ -335,13 +343,18 @@ function Header() {
                 <div className="headerP__row1">
                     <div className="headerP__row1__part1">
                         <a href="#" className="headerP__a" onClick={handleOpenP}><MenuIcon className="headerP__menu"/></a>
-                        <img className="headerP__logo" alt="" src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" />
+                        <Link to="/">
+                          <img className="headerP__logo" alt="" src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" />
+                        </Link>
                     </div>
                     <div className="headerP__row1__part1">
                         <p className="headerP__signin">Sign In</p>
                         <PersonIcon className="headerP__person"/>
-                        <ShoppingBasketIcon className="headerP__basket"/>
-                        <span className="headerP__total">0</span>
+                        <Link to="/checkout" className="test">
+                          <ShoppingBasketIcon className="headerP__basket"/>
+                          <span className="headerP__total">{basket?.length}</span>
+                        </Link>
+                        
                     </div>
                 </div>
                 <div className="headerP__row2">

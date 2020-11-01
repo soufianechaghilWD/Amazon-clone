@@ -62,6 +62,10 @@
 .header__basket {
   padding-top: 10px;
 }
+.test {
+  text-decoration: none !important;
+  color: white;
+}
 .header__option p span {
   color: #cd9042;
   font-size: 20px;
@@ -320,6 +324,7 @@ hr {
 .headerP__op {
   color: rgb(148, 145, 145);
 }
+
 @media (max-width: 990px) {
   .headerpc {
     display: none;

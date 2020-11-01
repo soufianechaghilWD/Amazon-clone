@@ -27,3 +27,24 @@
   margin-left: 5px;
   margin-right: 5px;
 }
+.home__frontPicSmall {
+  display: none;
+  object-fit: contain;
+  max-width: 100%;
+}
+
+@media (max-width: 990px) {
+  .home__frontPicSmall {
+    display: block;
+  }
+  .home__carousel {
+    display: none;
+  }
+  .home__row {
+    display: inline-block;
+    z-index: 1;
+    margin: 0;
+    align-items: center;
+    width: 100%;
+  }
+}

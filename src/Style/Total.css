@@ -1,0 +1,21 @@
+.total {
+  margin: 25px;
+  background-color: rgb(235, 230, 230);
+  border: 1px solid rgba(119, 118, 118, 0.3);
+  border-radius: 5px;
+  padding: 20px 20px 20px 20px;
+}
+.total > p {
+  margin: 0 0 10px;
+  padding-right: 40px;
+}
+.total > button {
+  background: #f0c14b;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+  width: 100%;
+  padding: 7px 0;
+  border-radius: 3px;
+}
