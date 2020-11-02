@@ -13,8 +13,8 @@ import ClearIcon from '@material-ui/icons/Clear';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import HomeIcon from '@material-ui/icons/Home';
 import { useStateValue } from "./StateProvider";
-import { Link } from 'react-router-dom';
-
+import { Link, useHistory } from 'react-router-dom';
+import { auth } from '../firebase'
 
 function getModalStyle() {
     const top = 0;
@@ -91,13 +91,14 @@ function getModalStyle() {
 
 function Header() {
 
-    const [{ basket }, dispatch] = useStateValue();
+    const [{ basket, user }, dispatch] = useStateValue();
     const classes = useStyles();
     const classesP = useStylesP();
     const [modalStyle] = React.useState(getModalStyle);
     const [modalStyleP] = React.useState(getModalStyleP);
     const [open, setOpen] = useState(false);
     const [openP, setOpenP] = useState(false);
+    const history = useHistory();
 
     const handleOpen = () => {
         setOpen(true);
@@ -113,6 +114,17 @@ function Header() {
       const handleCloseP = () => {
         setOpenP(false);
       };
+      const signinH = () => {
+        if(user) {
+          auth.signOut()
+          dispatch({
+            type: "SET_USER",
+            user: null,
+        })        
+        }else{
+          history.push('/signin')
+        }
+      }
     return (
         <div className="header">
             <Modal
@@ -307,9 +319,9 @@ function Header() {
                         <input type="text" className="header__searchInput" />
                         <button className="header__searchButton"><SearchIcon /></button>
                     </div>
-                    <div className="header__option">
-                        <span>Hello, Sign in</span>
-                        <p><strong>Accounts & lists</strong></p>
+                    <div className="header__option" onClick={signinH}>
+                        {user === null ? <span>Hello, Sign in</span> : <span>Hello {user.email}</span>}
+                        {user === null ? <p><strong>Accounts & lists</strong></p> : <p><strong>Sign out</strong></p>}
                     </div>
                     <div className="header__option">
                         <span>Returns</span>
@@ -348,7 +360,7 @@ function Header() {
                         </Link>
                     </div>
                     <div className="headerP__row1__part1">
-                        <p className="headerP__signin">Sign In</p>
+                        {user === null ? <p className="headerP__signin" onClick={() => history.push('/signin')}> Sign In</p> : <p className="headerP__signin" onClick={signinH}><small>{user.email}</small><br />Sign out</p>}
                         <PersonIcon className="headerP__person"/>
                         <Link to="/checkout" className="test">
                           <ShoppingBasketIcon className="headerP__basket"/>

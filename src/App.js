@@ -5,13 +5,16 @@ import Home from './Components/Home';
 import Footer from './Components/Footer';
 import Checkout from './Components/Checkout';
 import Payment from './Components/Payment';
-
+import Signin from './Components/Signin';
 
 function App() {
   return (
     <Router>
     <div className="App">
       <Switch>
+        <Route path="/signin">
+          <Signin />
+        </Route>
         <Route path="/payment">
           <Header />
           <Payment />

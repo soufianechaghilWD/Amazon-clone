@@ -59,6 +59,9 @@
   margin-right: 5px;
   cursor: pointer;
 }
+.header__option > span {
+  font-size: 12px;
+}
 .header__basket {
   padding-top: 10px;
 }
@@ -154,6 +157,7 @@
 .headerP__signin {
   padding-right: 4px;
   font-weight: bold;
+  cursor: pointer;
 }
 .headerP__person {
   padding-right: 11px;
